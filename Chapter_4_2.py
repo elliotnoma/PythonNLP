@@ -51,7 +51,7 @@ pd.DataFrame([computeProbs(f) for f in state_prob], columns = state_prob[0].keys
 
 start_probability = state_prob[0] 
 state_prob1 = state_prob[1:] 
-V, opt_states,max_prob = viterbi_states(states, start_probability, state_prob1)
+V, opt_states,max_prob = viterbi_states(states, start_probability, state_prob1, transition_probability)
 print ('The most probable series of states was [{}] with probability {:0.4}\n'.format(', '.join(opt_states), max_prob))
 
 print("observations")
